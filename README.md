@@ -1,6 +1,6 @@
 # Simple Frontend to display data from Flask API
 
-This project is a simple frontend app that displays data from a backend api connected to Postgresql. The external url for this app is: [https://vercel.com/elvis020/flask-crud-frontend](Articles App)
+This project is a simple frontend app hosted on vercel that displays data from a backend api connected to Postgresql. The external url for this app is: [https://flask-crud-frontend.vercel.app/](Articles App)
 
 ## Available Scripts
 
