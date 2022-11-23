@@ -1,38 +1,81 @@
+body{
+  background: #4e957f;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-color{
+  color: #fff;
+}
+.articleBg {
+  background-color: #52796f;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.articleBg div {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.articleBg .articleText {
+  flex: 1;
+  color: #d5d5d5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3.articleText{
+  font-style: italic;
+}
+
+
+
+.articleBg .iconsWrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+
+.articleBg .iconsWrap span {
+  display: inline-block;
+  margin: 0px 10px 0 10px;
+  cursor: pointer;
+  color: #00ff89;
+  transition: transform .2s;
+}
+.articleText .description{
+  color: #828282 ;
+}
+
+.articleBg .iconsWrap span:hover {
+  transition: transform .2s;
+  transform: scale(1.5)
+}
+
+.articleBg .iconsWrap .edit-article  {
+  color: #a1d828;
+}
+
+.articleBg .iconsWrap .delete-article  {
+  color: #a94848;
+}
+
+.articleBg .iconsWrap .delete-article span:hover {
+  transform: scale(1.5);
+  color: #860606;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.modalComp-title{
+  color: #4e957f;
 }
