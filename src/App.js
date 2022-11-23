@@ -24,9 +24,6 @@ function App() {
         })
         setData(new_article)
     }
-    const openForm = () => {
-        setEditedArticle({title: '', description: ''})
-    }
     const insertedArticle = (article) => {
         const new_article = [article, ...data]
         setData(new_article)
