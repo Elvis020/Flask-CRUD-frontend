@@ -17,7 +17,7 @@ export const ModalComp = (props) => {
                 <Modal.Header closeButton>
                     <Modal.Title>Add an article</Modal.Title>
                 </Modal.Header>
-                <Form handleClose={handleClose} article={props.article}/>
+                <Form insertedArticle={props.insertedArticle} fetchData={props.fetchData} handleClose={handleClose} article={props.article}/>
             </Modal>
         </React.Fragment>
     );

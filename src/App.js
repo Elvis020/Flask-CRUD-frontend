@@ -68,13 +68,13 @@ function App() {
             <br/><br/>
 
             <React.Fragment>
-                <AddArticle editTheArticle={editTheArticle}  insertedArticle={insertedArticle} updatedData={updatedData} article={data}/>
+                <AddArticle fetchData={fetchData} editTheArticle={editTheArticle}  insertedArticle={insertedArticle} updatedData={updatedData} article={data}/>
                 <br/><br/>
             </React.Fragment>
 
             {data && data.length ? (
                 <React.Fragment>
-                    <ArticleList insertedArticle={insertedArticle} updatedData={updatedData} editedArticle={editedArticle} editTheArticle={editTheArticle} data={data} deleteArticle={deleteArticle} />
+                    <ArticleList fetchData={fetchData} insertedArticle={insertedArticle} updatedData={updatedData} editedArticle={editedArticle} editTheArticle={editTheArticle} data={data} deleteArticle={deleteArticle} />
                 </React.Fragment>
             ):(
                 <Loading />

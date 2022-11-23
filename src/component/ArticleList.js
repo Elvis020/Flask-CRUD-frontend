@@ -43,6 +43,7 @@ export default function ArticleList(props) {
           {openEdit && (
               <React.Fragment>
                   <UpdateModal
+                      fetchData={props.fetchData}
                       show={true}
                       editTheArticle={props.editTheArticle}
                       insertedArticle={props.insertedArticle}

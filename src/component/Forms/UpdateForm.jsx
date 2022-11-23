@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState} from 'react';
 import ApiService from '../service/ApiService';
 import Modal from 'react-bootstrap/Modal';
@@ -19,8 +19,15 @@ function UpdateForm(props) {
             })
             .catch(err => console.log(err))
         handleClose()
-        window.location.reload(true);
     }
+
+
+    useEffect(() => {
+        return () => {
+            props.fetchData()
+        };
+    });
+
 
 
     return (

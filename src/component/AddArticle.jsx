@@ -3,10 +3,13 @@ import {ModalComp} from "./Modal/ModalComp";
 
 export const AddArticle = (props) => {
     useEffect(() => {
-    }, [props.article])
+        props.fetchData()
+    })
+
     return (
         <React.Fragment>
             <ModalComp
+                fetchData={props.fetchData}
                 editTheArticle={props.editTheArticle}
                 insertedArticle={props.insertedArticle}
                 updatedData={props.updatedData}

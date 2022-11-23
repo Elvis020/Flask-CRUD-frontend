@@ -9,8 +9,8 @@ function AddForm(props) {
     const [description, setDescription] = useState('')
 
     // For Modal
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(true);
+    const [show, setShow] = useState(props.show);
+    const handleClose = () => setShow(props.handleClose);
 
 
 
@@ -21,9 +21,15 @@ function AddForm(props) {
             })
             .catch(err => console.log(err))
         handleClose()
-        window.location.reload(true);
-
     }
+
+
+    useEffect(() => {
+        return () => {
+            props.fetchData()
+        };
+    });
+
 
     return (
         <React.Fragment>
