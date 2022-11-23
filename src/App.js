@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import {AddArticle} from "./component/AddArticle";
 import ArticleList from "./component/ArticleList";
 import {Loading} from "./component/Loading/Loading";
+import ApiService from "./component/service/ApiService";
 
 function App() {
     const [data, setData] = useState([])
@@ -27,7 +28,7 @@ function App() {
         setEditedArticle({title: '', description: ''})
     }
     const insertedArticle = (article) => {
-        const new_article = [...data, article]
+        const new_article = [article, ...data]
         setData(new_article)
     }
     const deleteArticle = (article) => {
@@ -38,7 +39,7 @@ function App() {
 
     async function fetchData() {
         try {
-            const result = await fetch("http://127.0.0.1:5000/get")
+            const result = await fetch(`${ApiService.URL}/get`)
             const newData = await result.json()
             setData(newData)
         } catch (err) {

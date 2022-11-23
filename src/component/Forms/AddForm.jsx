@@ -12,14 +12,23 @@ function AddForm(props) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(true);
 
+
+    const timerMain = () => {
+        const timer = setInterval(() =>{
+            window.location.reload()
+        },2)
+        return () => clearInterval(timer)
+    }
+
     const insertArticle = () => {
         ApiService.insertArticle({title, description})
             .then(res => {
                 props.insertedArticle(res)
             })
             .catch(err => console.log(err))
+        timerMain()
         handleClose()
-        window.location.reload(true);
+
     }
 
     return (

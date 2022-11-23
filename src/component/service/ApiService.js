@@ -1,5 +1,5 @@
 export default class ApiService{
-    static URL = "http://127.0.0.1:5000";
+    static URL = "https://flask-crud1-99.herokuapp.com";
     static updateArticle(id,body){
         return fetch(`${ApiService.URL}/update/${id}/`,{
             'method':'PUT',
